@@ -47,15 +47,23 @@ namespace errchk.Helpers {
                 if (item.CreationTime >= startDate && item.CreationTime <= endDate.AddDays(1)) {
                     var fileparts = item.FullName.Split('_');
 
-                    var _type = fileparts[4];
-                    var _date = fileparts[5].Substring(0,8);
+                    try
+                    {
+                        var _type = fileparts[4];
+                        var _date = fileparts[5].Substring(0,8);
 
-                    _files.Add(new Models.FileInfo() {
-                        ErrorDate = _date,
-                        Filename = item.FullName,
-                        Type = _type,
-                        FileType = _type
-                    });
+                        _files.Add(new Models.FileInfo() {
+                            ErrorDate = _date,
+                            Filename = item.FullName,
+                            Type = _type,
+                            FileType = _type
+                         });
+                    }
+                    catch (System.Exception)
+                    {
+                        ColorConsole.WriteError($"Error parsing {item.FullName} file.");
+                    }
+                    
                 }        
             }
 

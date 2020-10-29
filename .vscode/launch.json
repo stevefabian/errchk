@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/errchk.dll",
-            "args": ["trace", "-t", "715003509"],
+            "args": ["trace", "-t", "4931046500", "-sd", "20200101"],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopAtEntry": false
