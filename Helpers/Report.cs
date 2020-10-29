@@ -38,7 +38,7 @@ namespace errchk.Helpers {
                         if(LineHasCustomerId(parts, customerId)) {
                             if (rows.Count == 0) {
                                 // this is the first found row, so write the header
-                                ColorConsole.WriteInfo($"{path}");
+                                ColorConsole.WriteLine($"{path}", ConsoleColor.Magenta);
                                 Helpers.Report.PrintHeader(h);
                             }
 
