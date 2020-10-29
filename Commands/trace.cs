@@ -90,6 +90,9 @@ namespace errchk.Commands
 
             foreach (var f in files)
             {
+                // update progress bar
+                ColorConsole.Write(".");
+
                  // do we have a parser for this filetype?
                 var _parser = _plugins.FirstOrDefault(x => x.Key == f.FileType);
                 if (_parser == null) {
