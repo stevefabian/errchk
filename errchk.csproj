@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>errchk</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
+    <RootNamespace>errchk.Program</RootNamespace>
+    <Copyright>Build Date $([System.DateTime]::Now.ToString())</Copyright>
+    <AssemblyName>errchk</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>C&amp;I Portal Error file reporting tool</Description>
+    <ApplicationManifest>process.manifest</ApplicationManifest>
+    <PackageId>errchk.Program</PackageId>
+    <Authors>Steve Fabian</Authors>
+    <Company>Steve Fabian</Company>
+    <Product>errchk</Product>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="gooddogs.colorconsole" Version="1.0.0" />
+    <PackageReference Include="ManyConsole" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Composition" Version="1.0.31" />
+    <PackageReference Include="System.Composition.AttributedModel" Version="1.4.1" />
+  </ItemGroup>
+
+</Project>
